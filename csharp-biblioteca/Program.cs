@@ -1,4 +1,5 @@
-﻿using System;
+﻿using csharp_biblioteca;
+using System;
 
 namespace biblioteca
 {
@@ -6,7 +7,25 @@ namespace biblioteca
     {
         static void Main(string[] args)
         {
+            Biblio biblio = new Biblio();
 
+            User user1 = new User("Carlo", "Verdi", "d@d.it", "dsfsdfsdf", "5346354");
+            User user2 = new User("Michele", "Gialli" , "sdfsdf@sdf.it", "efwerwr", "486445");
+            User user3 = new User("Fabio", "Rossi", "dsfsdssdf@d.it", "dfsdfsdfdf","23423345434");
+
+            biblio.InserUser(user1);
+            biblio.InserUser(user2);
+            biblio.InserUser(user3);
+            Console.WriteLine(user1.Lastname);
+            
+
+            Document document1 = new Document();
+            Document document2 = new Document();
+            Document document3 = new Document();
+
+            biblio.InserDocument(document1);
+            biblio.InserDocument(document2);
+            biblio.InserDocument(document3);
         }
     }
 }
